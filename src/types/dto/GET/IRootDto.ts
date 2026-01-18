@@ -7,14 +7,14 @@ import type { IReceiverDto } from "./IReceiverDto";
 import type { ITaxTotalDto } from "./ITaxTotalDto";
 
 export interface IRootDto {
-    RootId: number;
-    DocumentType: string;
-    IssueDate: string; // ISO Date
-    Currency: string;
-    ExchangeRate: number;
-    ConditionOfSale: string;
-    ReferenceDocument: string;
-    NotesJson: string;
+    rootId: number;
+    documentType: string;
+    issueDate: string; 
+    currency: string;
+    exchangeRate: number;
+    conditionOfSale: string;
+    referenceDocument: string;
+    notesJson: string;
   
     Issuer: IIssuerDto;
     Receiver: IReceiverDto;
