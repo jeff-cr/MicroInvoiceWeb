@@ -1,7 +1,7 @@
 export interface ITaxTotalDto {
-    TaxTotalId: number;
-    TaxCode: string;
-    TaxableAmount: number;
-    TaxAmount: number;
+  taxTotalId: number;
+  taxCode: string;
+  taxableAmount: number;
+  taxAmount: number;
   }
   

@@ -1,15 +1,15 @@
 import type { ITaxisDto } from "./ITaxisDto";
 
 export interface IItemDto {
-    ItemId: number;
-    LineNumber: number;
-    Description: string;
-    UnitCode: string;
-    Quantity: number;
-    UnitPrice: number;
-    TotalLineAmount: number;
-    Taxes: ITaxisDto[];
-    DiscountAmount: number;
-    ProductCode: string;
+  itemId: number;
+  lineNumber: number;
+  description: string;
+  unitCode: string;
+  quantity: number;
+  unitPrice: number;
+  totalLineAmount: number;
+  taxes: ITaxisDto[];
+  discountAmount: number;
+  productCode: string;
   }
   

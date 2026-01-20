@@ -16,13 +16,13 @@ export interface IRootDto {
     referenceDocument: string;
     notesJson: string;
   
-    Issuer: IIssuerDto;
-    Receiver: IReceiverDto;
-    LegalMonetaryTotal: ILegalMonetaryTotalDto;
-    PaymentMeans: IPaymentMeansDto;
-    OriginSystem: IOriginSystemDto;
+    issuer: IIssuerDto;
+    receiver: IReceiverDto;
+    legalMonetaryTotal: ILegalMonetaryTotalDto;
+    paymentMeans: IPaymentMeansDto;
+    originSystem: IOriginSystemDto;
   
-    Items: IItemDto[];
-    TaxTotals: ITaxTotalDto[];
+    items: IItemDto[];
+    taxTotals: ITaxTotalDto[];
   }
   

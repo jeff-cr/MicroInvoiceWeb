@@ -1,6 +1,6 @@
 export interface INewTaxTotalDto {
-    TaxCode: string;
-    TaxableAmount: number;
-    TaxAmount: number;
+  taxCode: string;
+  taxableAmount: number;
+  taxAmount: number;
   }
   

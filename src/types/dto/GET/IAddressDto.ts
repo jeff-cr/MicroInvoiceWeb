@@ -1,8 +1,8 @@
 export interface IAddressDto {
-    AddressId: number;
-    CountryCode: string;
-    Province: string;
-    Canton: string;
-    District: string;
-    OtherInfo: string;
-  }
+  addressId: number;
+  countryCode: string;
+  province: string;
+  canton: string;
+  district: string;
+  otherInfo: string;
+}

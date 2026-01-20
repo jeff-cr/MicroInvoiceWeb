@@ -1,7 +1,7 @@
 export interface INewAddressDto {
-    CountryCode: string;
-    Province: string;
-    Canton: string;
-    District: string;
-    OtherInfo: string;
+  countryCode: string;
+  province: string;
+  canton: string;
+  district: string;
+  otherInfo: string;
   }

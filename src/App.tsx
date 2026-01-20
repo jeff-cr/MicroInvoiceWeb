@@ -1,9 +1,7 @@
 
 import './App.css'
-import TabPanel from './components/TabPanel'
-import InvoicePage from './pages/InvoicePage'
 import { Router } from './router/router'
-// import {TabPanel}from './components/TabPanel.tsx'
+
 
 function App() {
   // console.log("ENV:", import.meta.env);
@@ -11,8 +9,6 @@ function App() {
 
   return (
     <>
-      {/* <TabPanel  /> */}
-      {/* <InvoicePage /> */}
       <Router />
     </>
   )

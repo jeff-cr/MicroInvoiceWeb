@@ -1,7 +1,7 @@
 export interface INewLegalMonetaryTotalDto {
-    LineExtensionAmount: number;
-    TaxExclusiveAmount: number;
-    TaxInclusiveAmount: number;
-    PayableAmount: number;
+    lineExtensionAmount: number;
+    taxExclusiveAmount: number;
+    taxInclusiveAmount: number;
+    payableAmount: number;
   }
   

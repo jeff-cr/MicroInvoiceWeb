@@ -1,5 +1,5 @@
 export interface INewOriginSystemDto {
-    SystemId: string;
-    Version: string;
+  systemId: string;
+  version: string;
   }
   

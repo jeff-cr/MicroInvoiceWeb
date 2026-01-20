@@ -7,7 +7,7 @@ export function useInvoice() {
   // console.log("invoices Data ",query)
 
   return {
-    invoices: query.data ?? [],
+    invoices: query.data || null,
     isLoading: query.isLoading,
     isError: query.isError,
     refetch: query.refetch,

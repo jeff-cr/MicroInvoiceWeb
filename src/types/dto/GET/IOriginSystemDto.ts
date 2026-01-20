@@ -1,6 +1,6 @@
 export interface IOriginSystemDto {
-    OriginSystemId: number;
-    SystemId: string;
-    Version: string;
+  originSystemId: number;
+  systemId: string;
+  version: string;
   }
   

@@ -1,5 +1,5 @@
 export interface INewSoftwareSupplierDto {
-    Name: string;
-    Id: string;
+  name: string;
+  id: string;
   }
   

@@ -1,14 +1,13 @@
 import type { INewTaxisDto } from "./INewTaxisDto";
 
 export interface INewItemDto {
-    LineNumber: number;
-    Description: string;
-    UnitCode: string;
-    Quantity: number;
-    UnitPrice: number;
-    TotalLineAmount: number;
-    Taxes: INewTaxisDto[];
-    DiscountAmount: number;
-    ProductCode: string;
-  }
-  
+  lineNumber: number;
+  description: string;
+  unitCode: string;
+  quantity: number;
+  unitPrice: number;
+  totalLineAmount: number;
+  taxes: INewTaxisDto[];
+  discountAmount: number;
+  productCode: string;
+}
