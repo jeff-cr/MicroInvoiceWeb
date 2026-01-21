@@ -4,7 +4,7 @@ import { InvoiceTable } from "../features/components/InvoiceTable";
 export default function InvoicePage() {
   return (
     <div style={{padding:"50px", }}>
-     <div style={{marginBottom:"30px"}}>
+     <div style={{marginBottom:"30px", textAlign:"end"}}>
        <Typography variant="h4" sx={{ minWidth: 160 }}>
         Invoices
       </Typography>

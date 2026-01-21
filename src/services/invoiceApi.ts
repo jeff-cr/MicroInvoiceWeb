@@ -1,6 +1,8 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { IRootDto } from "../types/dto/GET/IRootDto";
 import { INewRootDto } from "../types/dto/POST/INewRootDto";
+import { PagedList } from "../types/dto/Params/PagedList";
+import { PaginationParams } from "../types/dto/Params/PaginationParams";
 
 // export interface Factura {
 //   id: string;
@@ -40,9 +42,15 @@ export const invoiceApi = createApi({
     },
   }),
   endpoints: (builder) => ({
-    getInvoices: builder.query<IRootDto[], void>({
-      query: () => "/document",
-      providesTags: ["Invoices"],
+    getInvoices: builder.query<PagedList<IRootDto>, PaginationParams>({
+      query: ({ pageNumber, pageSize }) => ({
+        url: "/document",
+        params: {
+          pageNumber,
+          pageSize,
+        },
+        providesTags: ["Invoices"],
+      }),
     }),
 
     getInvoiceById: builder.query<IRootDto, number>({

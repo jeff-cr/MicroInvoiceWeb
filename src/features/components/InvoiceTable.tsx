@@ -171,7 +171,7 @@ export function InvoiceTable() {
   });
 
   // const totalRows = mockInvoices.length;
-  const totalRows = 3;
+
 
   // const rows = mockInvoices
   //   .slice(
@@ -183,9 +183,17 @@ export function InvoiceTable() {
   //     // id: item.rootId,
   //     ...item,
   //   }));
-  const { invoices, isLoading } = useInvoice();
-  if (!invoices) return;
-  const rows: IInvoiceDto[] = mapTo<IRootDto, IInvoiceDto>(invoices);
+  const { response, isLoading } = useInvoice({
+  pageNumber: paginationModel.pageNumber + 1,  
+  pageSize: paginationModel.pageSize,
+});
+  if (!response?.items) return;
+
+const rows: IInvoiceDto[] = response?.items
+  ? mapTo<IRootDto, IInvoiceDto>(response.items)
+  : [];
+
+
 
   const columns = [
     { field: "documentType", headerName: "Document Type", width: 150 },
@@ -211,7 +219,7 @@ export function InvoiceTable() {
         <>
           <Tooltip title="Detail">
             <IconButton
-              color="primary"
+              color="inherit"
               onClick={() => {
                 console.log("params ", params.row);
                 navigate(`/invoices/${params.row.rootId}`);
@@ -222,7 +230,7 @@ export function InvoiceTable() {
           </Tooltip>
           <Tooltip title="XML">
             <IconButton
-              color="secondary"
+              color="inherit"
               onClick={() => {
                 navigate(`/invoices/${params.row.rootId}/xml`);
               }}
@@ -244,7 +252,7 @@ export function InvoiceTable() {
       columns={columns}
       pageNumber={paginationModel.pageNumber}
       pageSize={paginationModel.pageSize}
-      totalRows={totalRows}
+      totalRows={response.totalCount}
       onPaginationChange={(page, pageSize) =>
         setPaginationModel({ pageNumber: page, pageSize })
       }

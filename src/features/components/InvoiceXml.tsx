@@ -25,7 +25,7 @@ export const InvoiceXml = () => {
           <ArrowBackIosIcon /> Back
         </IconButton>
         <Typography variant="h5" sx={{ minWidth: 160, textAlign: "end" }}>
-          XML Invoice {id}
+          XML Document {id}
         </Typography>
       </div>
       <DataXml xmlText={invoiceXml} />;

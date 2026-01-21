@@ -74,7 +74,7 @@ export const InvoicePanelDetail = () => {
           <ArrowBackIosIcon /> Back
         </IconButton>
         <Typography variant="h5" sx={{ minWidth: 160, textAlign: "end" }}>
-          Invoice {id}
+          Document {id}
         </Typography>
       </div>
       <TabPanel tabs={tabs} />
